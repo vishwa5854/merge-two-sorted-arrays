@@ -21,15 +21,9 @@ public class Main {
             b[d] = scanner.nextInt();
         }
         int[] c = new int[sizeOfA + sizeOfB];
-        int min;
-        if(sizeOfA > sizeOfB){
-            min = sizeOfB;
-        }
-        else {
-            min = sizeOfA;
-        }
+        int min = Math.min(sizeOfA, sizeOfB);
         int i=0,j=0,k,l=0;
-        for(k=0;k<min;k++){
+        while(i<sizeOfA && j<sizeOfB){
             if(a[i] < b[j]){
                 c[l++] = a[i++];
             }
